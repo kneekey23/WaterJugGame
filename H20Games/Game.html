@@ -144,8 +144,8 @@
         water.page.triggerModal = function () {
             if (water.page.gameWon) {
               
-                var name = decodeURIComponent($.urlParam('Name'));
-                $("#modalMessage").text("Congratulations" + " " + name);
+                var name = water.layout.getQueryParams(document.location.search);
+                $("#modalMessage").text("Congratulations" + " " + name.Name + "!");
                 $('#winModal').modal('show');
             };
         }
